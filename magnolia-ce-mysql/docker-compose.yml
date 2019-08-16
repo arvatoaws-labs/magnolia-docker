@@ -23,12 +23,12 @@ services:
     environment:
       - INSTANCE_TYPE=author
       - DB_ADDRESS=db
-      - DB_PORT=5432
-      - DB_SCHEMA=magnolia
+      - DB_PORT=3306
+      - DB_SCHEMA=mysql
       - DB_USERNAME=root
       - DB_PASSWORD=mysecretpassword
       - IS_AUTHOR=true
-      - DEVELOP_MODE=false
+      - DEVELOP_MODE=true
 
   public:
     image: magnolia/magnolia-ce-mysql:6.0-9.0.13-jre11-slim
@@ -42,9 +42,9 @@ services:
     environment:
       - INSTANCE_TYPE=public
       - DB_ADDRESS=db
-      - DB_PORT=5432
-      - DB_SCHEMA=root
-      - DB_USERNAME=magnolia
+      - DB_PORT=3306
+      - DB_SCHEMA=mysql
+      - DB_USERNAME=root
       - DB_PASSWORD=mysecretpassword
       - IS_AUTHOR=false
-      - DEVELOP_MODE=false
+      - DEVELOP_MODE=true

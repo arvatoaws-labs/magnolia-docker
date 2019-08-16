@@ -1,5 +1,7 @@
 # Container settings - Adjust those default settings according to your needs
 
+cat /usr/local/tomcat/conf/context.xml | envsubst > /usr/local/tomcat/conf/context.xml.new && mv /usr/local/tomcat/conf/context.xml.new /usr/local/tomcat/conf/context.xml
+
 #
 # JVM settings
 #
